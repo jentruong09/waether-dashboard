@@ -21,7 +21,7 @@ header {
 }
 
 .top {
-    padding-top: 20px;
+    padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -29,16 +29,17 @@ header {
 }
 
 #bottom {
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 /* take out border? */
-#card1-1 {
-    border: 2px solid skyblue;
+.card {
+    opacity: .80;
+    border-radius: 5px;
 }
 
-#card1-2 {
-    border: 2px solid skyblue;
+#days {
+    border-radius: 5px;
 }
 
 /* Body Area */

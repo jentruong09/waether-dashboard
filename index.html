@@ -36,29 +36,31 @@
             <img class="bg-image"  src="assets/images/background-pexels-francesco-ungaro-2835436.jpg">
             <img class="small-bg-image" src="assets/images/vertical-pexels-samuel-walker-2013658.jpg">
             <!-- Top half of the page -->
-            <div class="top">
-                <div id="card1-1"  class="card col-3 grid">
-                    <div id="search-city" class="card-body input-group mt-2 mb-2">
-                        <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">&#128269</button>
+            <div class="container col-12 top">
+                <div class="row">
+                    <div id="card1"  class="card col-3 grid ml-5 mr-3">
+                        <form id="search-city" class="card-body input-group mt-2 mb-2">
+                            <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">&#128269</button>
+                        </form>
+                        <!-- List of previous searches -->
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item">Cras justo odio</li> <!-- Will delete - in js, create new li for each previous search or change to div and p -->
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
                     </div>
-                    <!-- List of previous searches -->
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                      </ul>
+                <div id="card2" class="card col-8 grid ml-3">
+                    <h2 class="today-weather"> Today's Weather </h2>
                 </div>
-                <div id="card1-2" class="card col-9 grid">
-
-                </div>
+            </div>
             </div>
             <!-- next 5 dat weather -->
             <div id="bottom" class="container col-12">
-                <div class="card-group ">
-                    <div class="card ml-4">
+                <div class="card-group">
+                    <div id="days" class="card ml-4">
                         <img src="assets/images/pexels-min-an-1403550.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -66,7 +68,7 @@
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
-                    <div class="card ml-4">
+                    <div id="days" class="card ml-4">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -74,7 +76,7 @@
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
-                    <div class="card ml-4">
+                    <div id="days" class="card ml-4">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -82,7 +84,7 @@
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
-                    <div class="card ml-4">
+                    <div id="days" class="card ml-4">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -90,8 +92,8 @@
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
-                    <div class="card ml-4 mr-4">
-                        <img src="..." class="card-img-top" alt="...">
+                    <div id="days" class="card ml-4 mr-4">
+                        <img src="..." class="card-img-top" alt="..."> <!-- Maybe get rid of pics -->
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
