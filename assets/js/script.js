@@ -40,23 +40,27 @@ var getWeather = function () {
 
 
 
-
+//Look into this, cannot get more than one to save
 $('button').on("click", function(event){
     event.preventDefault();
-    searchCity = $(".form-control").val();
+    searchCity = $(".form-control").val().trim();
     getWeather();
     
 
-    var searchContent = $(this).sibilings("input").val();
+    var searchContent = $(this).siblings("input").val();
     var storeArray = [];
     storeArray.push(searchContent)
-    local.storage("storedCityName", JSON.stringify(storeArray))
+    localStorage.setItem("storedCityName", JSON.stringify(storeArray))
 
     getStoredItem()
 });
 
+//Look into this
 function getStoredItem() {
     var pastSearch = JSON.parse(localStorage.getItem("storedCityName"))
+    var showPastSearch = document.createElement("li")
+    showPastSearch.textContent = storedCityName[i]
+    $("list-group list-group-flush mb-3").append(showPastSearch)
 
 
 }
