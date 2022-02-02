@@ -40,65 +40,82 @@
                 <div class="row">
                     <div id="card1"  class="card col-3 grid ml-5 mr-3">
                         <form id="search-city" class="card-body input-group mt-2 mb-2">
-                            <input type="search" class="form-control" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">&#128269</button>
+                            <input type="search" class="form-control" placeholder="Search" aria-label="Search" >
+                            <button class="btn btn-primary btn-lg btn-block" type="submit" id="button-addon2">&#128269</button>
                         </form>
                         <!-- List of previous searches -->
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                        <ul id="searchHistory" class="list-group list-group-flush mb-3">
                         </ul>
                     </div>
                 <div id="card2" class="card col-8 grid ml-3">
-                    <h2 class="today-weather"> Today's Weather </h2>
+                    <h2 class="today-weather"> Today's Weather: </h2>
+                    <h3 class="current-city"></h3>
+                    <p class="current-date"></p>
+                    <img></img> <!-- Under weather and icon class="current-icon"-->
+                    <p class="current-temp"></p>
+                    <p class="current-wind"></p>
+                    <p class="current-humidity"></p>
+                    <p class="current-uv"></p>
                 </div>
             </div>
             </div>
             <!-- next 5 dat weather -->
             <div id="bottom" class="container col-12">
-                <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="header-forecast"> 5-Day Forecast: </h2>
+                    <div class="card-group">
                     <div id="days" class="card ml-4">
-                        <img src="assets/images/pexels-min-an-1403550.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="day2date"></p>
+                            <img></img> 
+                            <p class="day2temp"></p>
+                            <p class="day2wind"></p>
+                            <p class="day2humidity"></p>
+                            <p class="day2uv"></p>
                         </div>
                     </div>
                     <div id="days" class="card ml-4">
-                        <img src="assets/images/pexels-min-an-1403550.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="day3date"></p>
+                            <img></img> 
+                            <p class="day3temp"></p>
+                            <p class="day3wind"></p>
+                            <p class="day3humidity"></p>
+                            <p class="day3uv"></p>
                         </div>
                     </div>
                     <div id="days" class="card ml-4">
-                        <img src="assets/images/pexels-min-an-1403550.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="day4date"></p>
+                            <img></img> 
+                            <p class="day4temp"></p>
+                            <p class="day4wind"></p>
+                            <p class="day4humidity"></p>
+                            <p class="day4uv"></p>
                         </div>
                     </div>
                     <div id="days" class="card ml-4">
-                        <img src="assets/images/pexels-min-an-1403550.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="day5date"></p>
+                            <img></img> 
+                            <p class="day5temp"></p>
+                            <p class="day5wind"></p>
+                            <p class="day5humidity"></p>
+                            <p class="day5uv"></p>
                         </div>
                     </div>
                     <div id="days" class="card ml-4 mr-4">
-                        <img src="assets/images/pexels-min-an-1403550.jpg" class="card-img-top" alt="..."> <!-- Maybe get rid of pics -->
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="day6date"></p>
+                            <img></img> 
+                            <p class="day6temp"></p>
+                            <p class="day6wind"></p>
+                            <p class="day6humidity"></p>
+                            <p class="day6uv"></p>
                         </div>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -106,9 +123,8 @@
            
         </div>
     </div>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

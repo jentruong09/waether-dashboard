@@ -20,6 +20,10 @@ header {
     display: none;
 }
 
+.btn {
+    
+}
+
 .top {
     padding-top: 80px;
     padding-left: 20px;
@@ -40,6 +44,10 @@ header {
 
 #days {
     border-radius: 5px;
+}
+
+.header-forecast {
+    opacity: 1;
 }
 
 /* Body Area */
