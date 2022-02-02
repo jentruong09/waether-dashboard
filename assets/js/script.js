@@ -67,7 +67,7 @@ var getWeather = function () {
                     // Circle back to this Jen! For the little image to pop up!
                     // $(".current-icon").empty()
                     // var currentIcon = uvData.daily[0].weather[0].icon
-                    // $("<img>").attr("href", "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png")
+                    // $("<img>").attr("href", "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png") //try ${currentIcon}
                     // console.log(uvData.daily[0].weather[0].icon)
 
 
@@ -177,8 +177,10 @@ $('button').on("click", function(event){
 
 
 // What to add
-// UV Index - color
+// UV Index - color for different serverities 
 //search history to stay in local storage
+//make the form empty out on it's own
+//weather icon?
 
 
 
