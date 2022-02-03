@@ -1,7 +1,7 @@
-# My Work Day Schedule 
+# Weather-or-Not
 
 ## Project Description
-With this day schedule, you will always remember what you need to do and when to do it! Simply add tasks to the slot next to the corresponding hour and hit save. You may update, change, and move your tasks as you see fit. They will remain there even if you come back to it days later!
+With this weather application, you can find the weather of over 200,000 cities! Simply search up any city and find the weather forecast of up to 5 days. 
 
 <br/>
 
@@ -19,17 +19,17 @@ With this day schedule, you will always remember what you need to do and when to
 
 <br/>
 
-[Live Project](https://jentruong09.github.io/my-work-day-schedule/)
+[Live Project](https://jentruong09.github.io/weather-dashboard/)
 
 <br/>
 
-[Repository](https://github.com/jentruong09/my-work-day-schedule)
+[Repository](https://github.com/jentruong09/weather-dashboard)
 
 <br/>
 
 ## Usage
 
-
+![dashboard](/assets/images/weather-dashboard.jpg)
 
 <br/>
 
@@ -37,7 +37,7 @@ With this day schedule, you will always remember what you need to do and when to
 ## Credits
 This project is made possible by:
 
-[OpenWeather - weather API](https://openweathermap.org)
+[OpenWeather - Weather API](https://openweathermap.org)
 
 [AIM at Melanoma Foundation - UV Index Reference](https://www.aimatmelanoma.org/melanoma-101/prevention/what-is-ultraviolet-uv-radiation/)
 
