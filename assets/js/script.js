@@ -1,33 +1,12 @@
-
-// var API_KEY = "174c27157f74315bc7f7708bb00e7190";
-
-
-
-
-
-// let weatherSearch = {
-//     var fetchWeather = function(){
-//         fetch("http://api.openweathermap.org/data/2.5/weather?q=new%20york&appid=174c27157f74315bc7f7708bb00e7190")
-//         .then((response) = response.json())
-//         .then((data) = console.log(data))
-//     }
-// }
-
-
-// var
-
-//get new api key?
 var API_KEY = "ed5364c18831aa760172c5c93330a21e";
-//var cityInput = document.querySelector(".form-control")
-//var searchBtn = document.getElementById("#button-addon2")
+
 
 searchCity = $(".form-control").val();
 var data;
-//console.log(cityInput)
 
 
 // Using one api to search via city to get lat and lon for second api that requires lat and lon for 7 day weather with uv
-var getWeather = function () {
+function getWeather() {
     var apiURL = "https://api.openweathermap.org/data/2.5/weather?q="+ searchCity + "&units=imperial&appid=" + API_KEY;
     
     fetch(apiURL)
@@ -64,17 +43,30 @@ var getWeather = function () {
                     $(".current-uv").empty()
                     $(".current-uv").append("UV Index: " + uvData.daily[0].uvi);
                     
-                    // Circle back to this Jen! For the little image to pop up!
-                    // $(".current-icon").empty()
-                    // var currentIcon = uvData.daily[0].weather[0].icon
-                    // $("<img>").attr("href", "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png") //try ${currentIcon}
-                    // console.log(uvData.daily[0].weather[0].icon)
+                    // //For image to pop up for Day 1
+                    $(".current-image").empty()
+                    $(".current-image").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[0].weather[0].icon+ "@2x.png") //try ${currentIcon}
+                    console.log(uvData.daily[0].weather[0].icon)
+
+                    //Color coding the UV Index for Day 1
+                    //$(".current-uv").removeAttr("style")
+                    $(".current-uv").each(function(){
+                        if (uvData.daily[0].uvi <= 2.99) {
+                            $(this).addClass("favorable")
+                        }
+                        else if (uvData.daily[0].uvi >= 3 && uvData.daily[0].uvi <= 5.99) {
+                            $(this).addClass("moderate")
+                        }
+                        else if (uvData.daily[0].uvi >= 6) {
+                            $(this).addClass("severe")
+                        }
+                    })
+
 
 
                     //Day 2 weather grab from APIs
                     $(".day2date").empty()
                     $(".day2date").append(moment().add(1, "days").format("dddd, MMMM Do"))
-                    //<img></img> 
                     $(".day2temp").empty()
                     $(".day2temp").append("Temp: " + uvData.daily[1].temp.day + "°F");
                     $(".day2wind").empty()
@@ -83,6 +75,25 @@ var getWeather = function () {
                     $(".day2humidity").append("Humidity: " + uvData.daily[1].humidity + "%");
                     $(".day2uv").empty()
                     $(".day2uv").append("UV Index: " + uvData.daily[1].uvi);
+
+
+                    // //For image to pop up for Day 2
+                    $(".day2icon").empty()
+                    $(".day2icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[1].weather[0].icon + "@2x.png") 
+
+
+                    //Color coding the UV Index for Day 2
+                    $(".day2uv").each(function(){
+                        if (uvData.daily[1].uvi <= 2.99) {
+                            $(this).addClass("favorable")
+                        }
+                        if (uvData.daily[1].uvi >= 3 && uvData.daily[1].uvi <= 5.99) {
+                            $(this).addClass("moderate")
+                        }
+                        if (uvData.daily[1].uvi >= 6) {
+                            $(this).addClass("severe")
+                        }
+                    })
 
 
                     //Day 3 weather grab from APIs
@@ -99,6 +110,25 @@ var getWeather = function () {
                     $(".day3uv").append("UV Index: " + uvData.daily[2].uvi);
 
 
+                    // //For image to pop up for Day 3
+                    $(".day3icon").empty()
+                    $(".day3icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[2].weather[0].icon + "@2x.png")
+
+
+                    //Color coding the UV Index for Day 3
+                    $(".day3uv").each(function(){
+                        if (uvData.daily[2].uvi <= 2.99) {
+                            $(this).addClass("favorable")
+                        }
+                        if (uvData.daily[2].uvi >= 3 && uvData.daily[2].uvi <= 5.99) {
+                            $(this).addClass("moderate")
+                        }
+                        if (uvData.daily[2].uvi >= 6) {
+                            $(this).addClass("severe")
+                        }
+                    })
+
+
                     //Day 4 weather grab from APIs
                     $(".day4date").empty()
                     $(".day4date").append(moment().add(3, "days").format("dddd, MMMM Do"))
@@ -111,6 +141,24 @@ var getWeather = function () {
                     $(".day4humidity").append("Humidity: " + uvData.daily[3].humidity + "%");
                     $(".day4uv").empty()
                     $(".day4uv").append("UV Index: " + uvData.daily[3].uvi);
+
+                    // //For image to pop up for Day 4
+                    $(".day4icon").empty()
+                    $(".day4icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[3].weather[0].icon + "@2x.png")
+
+
+                    //Color coding the UV Index for Day 4
+                    $(".day4uv").each(function(){
+                        if (uvData.daily[3].uvi <= 2.99) {
+                            $(this).addClass("favorable")
+                        }
+                        if (uvData.daily[3].uvi >= 3 && uvData.daily[3].uvi <= 5.99) {
+                            $(this).addClass("moderate")
+                        }
+                        if (uvData.daily[3].uvi >= 6) {
+                            $(this).addClass("severe")
+                        }
+                    })
 
 
                     //Day 5 weather grab from APIs
@@ -126,6 +174,24 @@ var getWeather = function () {
                     $(".day5uv").empty()
                     $(".day5uv").append("UV Index: " + uvData.daily[4].uvi);
 
+                    // //For image to pop up for Day 5
+                    $(".day5icon").empty()
+                    $(".day5icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[4].weather[0].icon + "@2x.png")
+
+
+                    //Color coding the UV Index for Day 5
+                    $(".day5uv").each(function(){
+                        if (uvData.daily[4].uvi <= 2.99) {
+                            $(this).addClass("favorable")
+                        }
+                        if (uvData.daily[4].uvi >= 3 && uvData.daily[4].uvi <= 5.99) {
+                            $(this).addClass("moderate")
+                        }
+                        if (uvData.daily[4].uvi >= 6) {
+                            $(this).addClass("severe")
+                        }
+                    })
+
 
                     //Day 6 weather grab from APIs
                     $(".day6date").empty()
@@ -140,6 +206,23 @@ var getWeather = function () {
                     $(".day6uv").empty()
                     $(".day6uv").append("UV Index: " + uvData.daily[5].uvi);
 
+                    // //For image to pop up for Day 6
+                    $(".day6icon").empty()
+                    $(".day6icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[5].weather[0].icon + "@2x.png")
+
+                    //Color coding the UV Index for Day 6
+                    $(".day6uv").each(function(){
+                        if (uvData.daily[5].uvi <= 2.99) {
+                            $(this).addClass("favorable")
+                        }
+                        if (uvData.daily[5].uvi >= 3 && uvData.daily[5].uvi <= 5.99) {
+                            $(this).addClass("moderate")
+                        }
+                        if (uvData.daily[5].uvi >= 6) {
+                            $(this).addClass("severe")
+                        }
+                    })
+
 
                 }) 
        }); 
@@ -148,29 +231,69 @@ var getWeather = function () {
 
 
 
-
+// var storeArray = localStorage.getItem("storedCityName")
+// storeArray = JSON.parse(storeArray) 
 var storeArray = [];
 
 //Look into this, cannot get more than one to save
 $('button').on("click", function(event){
     event.preventDefault();
+    // creates a the location for the api to know which city the user wants
     searchCity = $(".form-control").val().trim();
     getWeather();
     
 
     var searchContent = $(this).siblings("input").val();
-    var storeArray =[];
-    storeArray.push(searchContent)
-    localStorage.setItem("storedCityName", JSON.stringify(storeArray))
+    storeArray.push(searchCity),
+    localStorage.setItem("storedCityName", JSON.stringify(storeArray));
+    console.log(storeArray)
 
-    //Add new button
+    // function createNewButtons() {
+        var newButton = $("<button>")
+        newButton.text(searchCity)
+        newButton.addClass("btn btn-primary btn-lg btn-block")
+        newButton.attr("id","new-button")
+        $("#searchHistory").append(newButton)
+        //$(".form-control").empty("")
+    // } return createNewButtons
+    // //getStoredItem()
+    
+//    for (var i=0; i<storeArray.length; i++) {
+        // var oldCities = JSON.parse(localStorage.getItem("storedCityName"));
+        // console.log(oldCities)
+        // var newButton = $("<button>")
+        // newButton.text(oldCities)
+        // newButton.addClass("btn btn-primary btn-lg btn-block")
+        // newButton.attr("id","new-button")
+        // $("#searchHistory").append(newButton)
+            
+    // }
+
+});
+
+// Creating the buttons for previous searches
+var oldCities = JSON.parse(localStorage.getItem("storedCityName"));
+console.log(oldCities)
+
+for (var i = 0; i < oldCities.length; i++) {
     var newButton = $("<button>")
-    newButton.text(searchContent)
-    newButton.addClass("btn btn-primary btn-lg btn-block")
+    newButton.addClass("btn btn-primary btn-lg btn-block card-old")
+    newButton.attr("id","new-button")
+    newButton.text(oldCities[i])
     $("#searchHistory").append(newButton)
-    $(".form-control").empty("")
+        
+}
 
-    //getStoredItem()
+
+// To get previous searches to pull data - not sure how to make this work
+$('#new-button').on("click", function(event){
+    event.preventDefault();
+    history = $(this).text()
+    console.log(history)
+    
+    
+
+
 });
 
 
@@ -185,34 +308,3 @@ $('button').on("click", function(event){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //Look into this
-// function getStoredItem() {
-//     $("#searchHistory").empty();
-//     storeArray.forEach(function(city){
-//         var everyCity = document.createElement("button")
-//         $("#searchHistory").appendChild(storeArray)
-//         console.log(storeArray)
-//     })
-// }
-
-
-
-// var pastSearch = JSON.parse(localStorage.getItem("storedCityName"))
-//     var showPastSearch = document.createElement("li")
-//     showPastSearch.textContent = storedCityName[i]
-//     $("list-group list-group-flush mb-3").append(showPastSearch)

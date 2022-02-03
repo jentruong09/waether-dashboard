@@ -1,7 +1,9 @@
+/* Styling for the header of the page */
 header {
     font-family: 'Raleway', sans-serif;
 }
 
+/* Backgorund colors for the header*/
 .jumbotron {
     background-color: #87CEFA;
 }
@@ -10,6 +12,7 @@ header {
     background-color: #4682B4;
 }
 
+/* Sizing for the images */
 .bg-image {
     width: 100%;
     position: absolute;
@@ -18,10 +21,6 @@ header {
 
 .small-bg-image {
     display: none;
-}
-
-.btn {
-    
 }
 
 .top {
@@ -46,9 +45,30 @@ header {
     border-radius: 5px;
 }
 
+/* Making the backgrounds clear */
 .header-forecast {
     opacity: 1;
 }
+
+.current-image {
+    max-width: 60px;
+    max-height: auto;
+}
+
+
+/* To change the color of the UV */
+.favorable {
+    background-color: green
+}
+
+.moderate {
+    background-color: yellow
+}
+
+.severe {
+    background-color: red
+}
+
 
 /* Body Area */
 /* font-family: 'Andada Pro', serif; */
