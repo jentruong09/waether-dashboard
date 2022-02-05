@@ -49,6 +49,9 @@ function getWeather() {
                     $(".current-image").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[0].weather[0].icon+ "@2x.png") //try ${currentIcon}
                     console.log(uvData.daily[0].weather[0].icon)
 
+                    $(".current-uv").removeClass("favorable")
+                    $(".current-uv").removeClass("moderate")
+                    $(".current-uv").removeClass("severe")
                     //Color coding the UV Index for Day 1
                     //$(".current-uv").removeAttr("style")
                     $(".current-uv").each(function(){
@@ -82,16 +85,18 @@ function getWeather() {
                     $(".day2icon").empty()
                     $(".day2icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[1].weather[0].icon + "@2x.png") 
 
-
+                    $(".day2uv").removeClass("favorable")
+                    $(".day2uv").removeClass("moderate")
+                    $(".day2uv").removeClass("severe")
                     //Color coding the UV Index for Day 2
                     $(".day2uv").each(function(){
                         if (uvData.daily[1].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[1].uvi >= 3 && uvData.daily[1].uvi <= 5.99) {
+                        else if (uvData.daily[1].uvi >= 3 && uvData.daily[1].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[1].uvi >= 6) {
+                        else if (uvData.daily[1].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
@@ -115,16 +120,18 @@ function getWeather() {
                     $(".day3icon").empty()
                     $(".day3icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[2].weather[0].icon + "@2x.png")
 
-
+                    $(".day3uv").removeClass("favorable")
+                    $(".day3uv").removeClass("moderate")
+                    $(".day3uv").removeClass("severe")
                     //Color coding the UV Index for Day 3
                     $(".day3uv").each(function(){
                         if (uvData.daily[2].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[2].uvi >= 3 && uvData.daily[2].uvi <= 5.99) {
+                        else if (uvData.daily[2].uvi >= 3 && uvData.daily[2].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[2].uvi >= 6) {
+                        else if (uvData.daily[2].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
@@ -147,16 +154,18 @@ function getWeather() {
                     $(".day4icon").empty()
                     $(".day4icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[3].weather[0].icon + "@2x.png")
 
-
+                    $(".day4uv").removeClass("favorable")
+                    $(".day4uv").removeClass("moderate")
+                    $(".day4uv").removeClass("severe")
                     //Color coding the UV Index for Day 4
                     $(".day4uv").each(function(){
                         if (uvData.daily[3].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[3].uvi >= 3 && uvData.daily[3].uvi <= 5.99) {
+                        else if (uvData.daily[3].uvi >= 3 && uvData.daily[3].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[3].uvi >= 6) {
+                        else if (uvData.daily[3].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
@@ -179,16 +188,18 @@ function getWeather() {
                     $(".day5icon").empty()
                     $(".day5icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[4].weather[0].icon + "@2x.png")
 
-
+                    $(".day5uv").removeClass("favorable")
+                    $(".day5uv").removeClass("moderate")
+                    $(".day5uv").removeClass("severe")
                     //Color coding the UV Index for Day 5
                     $(".day5uv").each(function(){
                         if (uvData.daily[4].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[4].uvi >= 3 && uvData.daily[4].uvi <= 5.99) {
+                        else if (uvData.daily[4].uvi >= 3 && uvData.daily[4].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[4].uvi >= 6) {
+                        else if (uvData.daily[4].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
@@ -211,15 +222,18 @@ function getWeather() {
                     $(".day6icon").empty()
                     $(".day6icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[5].weather[0].icon + "@2x.png")
 
+                    $(".day6uv").removeClass("favorable")
+                    $(".day6uv").removeClass("moderate")
+                    $(".day6uv").removeClass("severe")
                     //Color coding the UV Index for Day 6
                     $(".day6uv").each(function(){
                         if (uvData.daily[5].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[5].uvi >= 3 && uvData.daily[5].uvi <= 5.99) {
+                        else if (uvData.daily[5].uvi >= 3 && uvData.daily[5].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[5].uvi >= 6) {
+                        else if (uvData.daily[5].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
@@ -318,6 +332,9 @@ $('.saved-city').on("click", function(event){
                     $(".current-image").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[0].weather[0].icon+ "@2x.png") //try ${currentIcon}
                     console.log(uvData.daily[0].weather[0].icon)
 
+                    $(".current-uv").removeClass("favorable")
+                    $(".current-uv").removeClass("moderate")
+                    $(".current-uv").removeClass("severe")
                     //Color coding the UV Index for Day 1
                     //$(".current-uv").removeAttr("style")
                     $(".current-uv").each(function(){
@@ -351,16 +368,18 @@ $('.saved-city').on("click", function(event){
                     $(".day2icon").empty()
                     $(".day2icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[1].weather[0].icon + "@2x.png") 
 
-
+                    $(".day2uv").removeClass("favorable")
+                    $(".day2uv").removeClass("moderate")
+                    $(".day2uv").removeClass("severe")
                     //Color coding the UV Index for Day 2
                     $(".day2uv").each(function(){
                         if (uvData.daily[1].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[1].uvi >= 3 && uvData.daily[1].uvi <= 5.99) {
+                        else if (uvData.daily[1].uvi >= 3 && uvData.daily[1].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[1].uvi >= 6) {
+                        else if (uvData.daily[1].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
@@ -384,13 +403,15 @@ $('.saved-city').on("click", function(event){
                     $(".day3icon").empty()
                     $(".day3icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[2].weather[0].icon + "@2x.png")
 
-
+                    $(".day3uv").removeClass("favorable")
+                    $(".day3uv").removeClass("moderate")
+                    $(".day3uv").removeClass("severe")
                     //Color coding the UV Index for Day 3
                     $(".day3uv").each(function(){
                         if (uvData.daily[2].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[2].uvi >= 3 && uvData.daily[2].uvi <= 5.99) {
+                        else if (uvData.daily[2].uvi >= 3 && uvData.daily[2].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
                         if (uvData.daily[2].uvi >= 6) {
@@ -416,16 +437,18 @@ $('.saved-city').on("click", function(event){
                     $(".day4icon").empty()
                     $(".day4icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[3].weather[0].icon + "@2x.png")
 
-
+                    $(".day4uv").removeClass("favorable")
+                    $(".day4uv").removeClass("moderate")
+                    $(".day4uv").removeClass("severe")
                     //Color coding the UV Index for Day 4
                     $(".day4uv").each(function(){
                         if (uvData.daily[3].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[3].uvi >= 3 && uvData.daily[3].uvi <= 5.99) {
+                        else if (uvData.daily[3].uvi >= 3 && uvData.daily[3].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[3].uvi >= 6) {
+                        else if (uvData.daily[3].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
@@ -448,16 +471,18 @@ $('.saved-city').on("click", function(event){
                     $(".day5icon").empty()
                     $(".day5icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[4].weather[0].icon + "@2x.png")
 
-
+                    $(".day5uv").removeClass("favorable")
+                    $(".day5uv").removeClass("moderate")
+                    $(".day5uv").removeClass("severe")
                     //Color coding the UV Index for Day 5
                     $(".day5uv").each(function(){
                         if (uvData.daily[4].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[4].uvi >= 3 && uvData.daily[4].uvi <= 5.99) {
+                        else if (uvData.daily[4].uvi >= 3 && uvData.daily[4].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[4].uvi >= 6) {
+                        else if (uvData.daily[4].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
@@ -479,16 +504,19 @@ $('.saved-city').on("click", function(event){
                     // //For image to pop up for Day 6
                     $(".day6icon").empty()
                     $(".day6icon").attr("src", "http://openweathermap.org/img/wn/" + uvData.daily[5].weather[0].icon + "@2x.png")
-
+                    
+                    $(".day6uv").removeClass("favorable")
+                    $(".day6uv").removeClass("moderate")
+                    $(".day6uv").removeClass("severe")
                     //Color coding the UV Index for Day 6
                     $(".day6uv").each(function(){
                         if (uvData.daily[5].uvi <= 2.99) {
                             $(this).addClass("favorable")
                         }
-                        if (uvData.daily[5].uvi >= 3 && uvData.daily[5].uvi <= 5.99) {
+                        else if (uvData.daily[5].uvi >= 3 && uvData.daily[5].uvi <= 5.99) {
                             $(this).addClass("moderate")
                         }
-                        if (uvData.daily[5].uvi >= 6) {
+                        else if (uvData.daily[5].uvi >= 6) {
                             $(this).addClass("severe")
                         }
                     })
