@@ -255,6 +255,7 @@ $('.search').on("click", function(event){
     searchCity = $(".form-control").val().trim();
     getWeather();
 
+    
     var searchContent = $(this).siblings("input").val();
     storeArray.push(searchCity),
     localStorage.setItem("storedCityName", JSON.stringify(storeArray));
@@ -266,8 +267,6 @@ $('.search').on("click", function(event){
     newButton.addClass("btn btn-primary btn-lg btn-block")
     newButton.attr("id","new-button")
     $("#searchHistory").append(newButton)
-
-
 });
 
 // Creating the buttons for previous searches

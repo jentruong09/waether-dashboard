@@ -4,12 +4,9 @@ header {
 }
 
 /* Backgorund colors for the header*/
-.jumbotron {
-    background-color: #87CEFA;
-}
-
-.color {
-    background-color: #4682B4;
+.header {
+    z-index: 999;
+    padding-top: 30px;
 }
 
 /* Sizing for the images */
@@ -17,6 +14,7 @@ header {
     width: 100%;
     position: absolute;
     left: 0;
+    z-index: -1;
 }
 
 .small-bg-image {
@@ -29,6 +27,15 @@ header {
     padding-right: 20px;
     padding-bottom: 20px;
     
+}
+
+.search {
+    max-height: 38px;
+    max-width: 40px;
+}
+
+.today-weather {
+    padding-top: 10px;
 }
 
 #bottom {

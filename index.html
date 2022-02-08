@@ -22,26 +22,25 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <header>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Weather or Not</h1>
-          <div class="slogan">We are here for you!</div>
-        </div>
-      </div>
-    </header>
+
+    <img class="bg-image"  src="assets/images/background-pexels-francesco-ungaro-2835436.jpg">
+    <img class="small-bg-image" src="assets/images/vertical-pexels-samuel-walker-2013658.jpg">
+    <div class="header container">
+        <h1 class="display-4">Weather or Not</h1>
+        <div class="slogan">We are here for you!</div>
+    </div>
+   
     <div class="weather-dashboard"> 
         <div class="color">
             <!-- Background images for body area (second one is for media query)-->
-            <img class="bg-image"  src="assets/images/background-pexels-francesco-ungaro-2835436.jpg">
-            <img class="small-bg-image" src="assets/images/vertical-pexels-samuel-walker-2013658.jpg">
+            
             <!-- Top half of the page -->
             <div class="container col-12 top">
                 <div class="row">
                     <div id="card1"  class="card col-sm-3 col-lg-3 grid ml-5 mr-3">
                         <form id="search-city" class="card-body input-group mt-2 mb-2">
                             <input type="search" class="form-control" placeholder="Search" aria-label="Search" >
-                            <button class="btn btn-primary btn-lg btn-block search" type="submit" id="button-addon2">&#128269</button>
+                            <button class="btn btn-primary search" type="submit" >&#128269</button>
                         </form>
                         <!-- List of previous searches -->
                         <ul id="searchHistory" class="list-group list-group-flush mb-3">
