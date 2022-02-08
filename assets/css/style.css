@@ -65,22 +65,22 @@ header {
 
 /* To change the color of the UV */
 .favorable {
-    background-color: green
+    color: darkgreen
 }
 
 .moderate {
-    background-color: yellow
+    color: rgba(255, 255, 0, 0.616)
 }
 
 .severe {
-    background-color: red
+    color: rgba(255, 0, 0, 0.733)
 }
 
 
 /* Body Area */
 /* font-family: 'Andada Pro', serif; */
 
-@media (max-width: 1025px) {
+@media (max-width: 1640px) {
     .bg-image {
         display: none;
     }
