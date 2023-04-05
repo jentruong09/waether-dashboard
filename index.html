@@ -1,129 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather or Not</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <!-- Font for header -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    
+    <!-- boxicon link -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <!-- Font for body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap" rel="stylesheet">
-
+    <!-- css link -->
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
 
-    <img class="bg-image"  src="assets/images/background-pexels-francesco-ungaro-2835436.jpg">
-    <img class="small-bg-image" src="assets/images/vertical-pexels-samuel-walker-2013658.jpg">
-    <div class="header container">
-        <h1 class="display-4">Weather or Not</h1>
-        <div class="slogan">We are here for you!</div>
-    </div>
-   
-    <div class="weather-dashboard"> 
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+            <div class="logo">
+                <h3 class="display-4">Weather or Not <i class='bx bx-cloud-lightning' ></i></h3>
+                <p class="slogan">We are here for you!</p>
+            </div>
+            <form class="form-inline my-2 my-lg-0" id="search-city">
+                <input class="form-control mr-sm-2 bg-dark text-white" id="place" type="search" placeholder="Search"
+                    aria-label="Search" />
+                <button class="btn btn-dark search" type="submit">
+                    <i class="bx bx-search"></i>
+                </button>
+            </form>
+
+        </nav>
+    </header>
+
+    <div class="weather-dashboard">
         <div class="color">
-            <!-- Background images for body area (second one is for media query)-->
-            
             <!-- Top half of the page -->
-            <div class="container col-12 top">
-                <div class="row">
-                    <div id="card1"  class="card col-sm-3 col-lg-3 grid ml-5 mr-3">
-                        <form id="search-city" class="card-body input-group mt-2 mb-2">
-                            <input type="search" class="form-control" placeholder="Search" aria-label="Search" >
-                            <button class="btn btn-primary search" type="submit" >&#128269</button>
-                        </form>
-                        <!-- List of previous searches -->
-                        <ul id="searchHistory" class="list-group list-group-flush mb-3">
-                        </ul>
-                    </div>
-                <div id="card2" class="card col-sm-6 col-lg-8 grid ml-3">
-                    <h2 class="today-weather"> Today's Weather: </h2>
-                    <h3 class="current-city"></h3>
-                    <p class="current-date"></p>
-                    <img class="current-image"></img> <!-- Under weather and icon, class="current-icon"-->
-                    <p class="current-temp"></p>
-                    <p class="current-wind"></p>
-                    <p class="current-humidity"></p>
-                    <p class="current-uv"></p>
+            <div class="container " id="top">
+                <div class="row container col-12">
+                    <div id="card1" class="card col-sm-3 col-lg-3 grid ml-5 mr-3 border-0 bg-dark"></div>
+                    <div id="card2" class="container col-sm-6 col-lg-8 grid ml-3 border-0 bg-dark"></div>
                 </div>
             </div>
-            </div>
-            <!-- next 5 dat weather -->
-            <div id="bottom" class="container col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="header-forecast"> 5-Day Forecast: </h2>
-                    <div class="card-group">
-                    <div id="days" class="card ml-4">
-                        <div class="card-body">
-                            <p class="day2date"></p>
-                            <img class="day2icon"></img> 
-                            <p class="day2temp"></p>
-                            <p class="day2wind"></p>
-                            <p class="day2humidity"></p>
-                            <p class="day2uv"></p>
-                        </div>
-                    </div>
-                    <div id="days" class="card ml-4">
-                        <div class="card-body">
-                            <p class="day3date"></p>
-                            <img class="day3icon"></img> 
-                            <p class="day3temp"></p>
-                            <p class="day3wind"></p>
-                            <p class="day3humidity"></p>
-                            <p class="day3uv"></p>
-                        </div>
-                    </div>
-                    <div id="days" class="card ml-4">
-                        <div class="card-body">
-                            <p class="day4date"></p>
-                            <img class="day4icon"></img> 
-                            <p class="day4temp"></p>
-                            <p class="day4wind"></p>
-                            <p class="day4humidity"></p>
-                            <p class="day4uv"></p>
-                        </div>
-                    </div>
-                    <div id="days" class="card ml-4">
-                        <div class="card-body">
-                            <p class="day5date"></p>
-                            <img class="day5icon"></img> 
-                            <p class="day5temp"></p>
-                            <p class="day5wind"></p>
-                            <p class="day5humidity"></p>
-                            <p class="day5uv"></p>
-                        </div>
-                    </div>
-                    <div id="days" class="card ml-4 mr-4">
-                        <div class="card-body">
-                            <p class="day6date"></p>
-                            <img class="day6icon"></img> 
-                            <p class="day6temp"></p>
-                            <p class="day6wind"></p>
-                            <p class="day6humidity"></p>
-                            <p class="day6uv"></p>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
+            <!-- hourly forecast -->
+            <div class="container" id="middle">
+                <h3 class="card-headers">Hourly Forecast</h3>
+                <div class="row container col-12 d-flex justify-content-between" id="hourlyForecast">
                 </div>
             </div>
-                  
-           
+            <!-- next 5 day weather -->
+            <div class="container" id="bottom"> 
+                <h3 class="card-headers">Daily Forecast</h3>
+                <div class="row container col-12 d-flex justify-content-between" id="weeklyForecast">
+                </div>
+            </div>
         </div>
     </div>
+    <!-- jquery link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- moment.js link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- js link -->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

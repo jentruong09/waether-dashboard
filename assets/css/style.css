@@ -1,67 +1,110 @@
-/* Styling for the header of the page */
-header {
-    font-family: 'Raleway', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* page styling */
+:root {
+    --bg-color: #1b1b1b;
+    --second-bg-color: #262626;
+    --text-color: #fff;
+    --main-color: #ec6e4c;
 }
 
-/* Backgorund colors for the header*/
-.header {
-    z-index: 999;
-    padding-top: 30px;
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 
-/* Sizing for the images */
-.bg-image {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    z-index: -1;
+i {
+    color: var(--main-color);
 }
 
-.small-bg-image {
-    display: none;
+
+/* header area */
+.logo {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: var(--text-color);
 }
 
-.top {
-    padding-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+.header h3 {
+    font-size: 2rem;
+}
+
+.header p {
+    color: var(--main-color);
+}
+
+button i {
+    color: var(--main-color);
+}
+
+/* cards */
+#top {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     
 }
 
-.search {
-    max-height: 38px;
-    max-width: 40px;
-}
-
-.today-weather {
-    padding-top: 10px;
-}
-
 #bottom {
-    padding-top: 50px;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
 }
 
-/* take out border? */
+/* for each containter/card */
 .card {
-    opacity: .80;
-    border-radius: 5px;
+    border-radius: 1.5rem;
 }
 
-#days {
-    border-radius: 5px;
+.card-headers {
+    padding-top: 1rem;
 }
 
-/* Making the backgrounds clear */
-.header-forecast {
-    opacity: 1;
+.card-body p {
+    font-size: .75rem;
 }
 
-.current-image {
-    max-width: 60px;
-    max-height: auto;
+#card2 {
+    border-radius: 1.5rem;
 }
 
+.today {
+    margin-top: .75rem;
+    margin-left: 1.25rem;
+    color: var(--main-color);
+}
+
+.highlight {
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+/* hourly css */
+.hourlyImage {
+    width: 2rem;
+    height: 2rem;
+}
+
+#hourlycard {
+    margin: .25rem;
+}
+
+/* headers for hourly and daily */
+.card-headers {
+    display: none;
+    color: var(--main-color);
+}
+
+.highlight {
+    background-color: var(--second-bg-color);
+    width: 9rem;
+    height: 7rem;
+    margin: .5rem;
+}
 
 /* To change the color of the UV */
 .favorable {
