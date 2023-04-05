@@ -70,6 +70,7 @@ button i {
 
 #card2 {
     border-radius: 1.5rem;
+    display: none;
 }
 
 .today {
@@ -120,18 +121,41 @@ button i {
 }
 
 
-/* Body Area */
-/* font-family: 'Andada Pro', serif; */
-
-@media (max-width: 1640px) {
-    .bg-image {
-        display: none;
+@media (max-width: 1199px) {
+    #card1 {
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .small-bg-image {
-        display: block;
-        width: 100%;
-        position: absolute;
-        left: 0;
+    #card2 {
+        margin-top: 2rem;
+
     }
-  }
+
+    #top {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #card2 {
+        display: none !important;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dailyWeather {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #place{
+        margin: 0;
+        width: 70%;
+    }
+}

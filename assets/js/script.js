@@ -16,12 +16,13 @@ function getWeather() {
             return response.json();
         })
         .then(function(data){
-            console.log(data)
+            
         //    data[data.coord.lat] = lat
         //    data[data.coord.lon] = lon
             var lat = data.coord.lat
             var lon = data.coord.lon
-            
+            console.log(data)
+
            var uvURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + API_KEY;
             fetch(uvURL) 
                 .then(function(response){
@@ -76,8 +77,8 @@ function getWeather() {
 
                     $(`
                         <p class="today">Today's Highlights</p>
-                        <div class="continer flex-wrap justify-content-around">
-                        <div class="card-group border-0 bg-dark">
+                        <div class="continer flex-wrap justify-content-between">
+                        <div class="card-group d-flex flex-wrap border-0 bg-dark">
                             <div class="card d-inline-flex border-0 bg-dark">
                                 <div class="card-body highlight">
                                     <p class="title">Wind</p>
@@ -111,7 +112,7 @@ function getWeather() {
                             </div>
                         </div>
                         </div>
-                        <div class="continer flex-wrap justify-content-around">
+                        <div class="continer flex-wrap justify-content-between">
                         <div class="card-group border-0 bg-dark">
                             <div class="card d-inline-flex border-0 bg-dark">
                                 <div class="card-body highlight">
@@ -149,6 +150,7 @@ function getWeather() {
                     `).appendTo("#card2")
 
                     $(".card-headers").show()
+                    $("#card2").show()
 
                     // hourly forecast
                     for (let i = 1; i <14; i++) {
@@ -180,7 +182,7 @@ function getWeather() {
                     var humidity = uvData.daily[i].humidity
 
                     $(`
-                    <div class="card border-0 bg-dark">
+                    <div class="card border-0 bg-dark dailyWeather">
                         <div class="card-body">
                             <p class="date" data-date="${date}">${date}</p>
                             <img class="image" data-img=${image} src="http://openweathermap.org/img/wn/${image}@2x.png"> 
