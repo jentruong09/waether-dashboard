@@ -173,10 +173,7 @@ function getWeather() {
                     // <p class="uvIndex" data-unIndex"${uvIndex}">UV Index:${uvIndex}</p>
                     
                     for (let i = 1; i < uvData.daily.length; i++) {
-                    //console.log(uvData.daily.length)   
-                    //console.log(uvData.daily[i].weather[0].icon)    
                     var image = uvData.daily[i].weather[0].icon
-                    //var city = data.name
                     var date = moment().add(i, "days").format("dddd, MMMM Do")
                     var temp = uvData.daily[i].temp.day.toFixed()
                     var wind = uvData.daily[i].wind_speed.toFixed()
