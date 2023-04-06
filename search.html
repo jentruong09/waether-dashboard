@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather or Not</title>
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    
+    <!-- boxicon link -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="assets/css/search.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+            <div class="logo">
+                <h3 class="display-4"><a href="https://jentruong09.github.io/weather-dashboard/"> Weather or Not <i class='bx bx-cloud-lightning' ></i></a></h3>
+                <p class="slogan">We are here for you!</p>
+            </div>
+            <form class="form-inline my-2 my-lg-0" id="search-city">
+                <input class="form-control mr-2 bg-dark text-white" id="place" type="search" placeholder="Search"
+                    aria-label="Search" />
+                <button class="btn btn-dark search" type="submit">
+                    <i class="bx bx-search"></i>
+                </button>
+            </form>
+
+        </nav>
+    </header>
+
+    <div class="weather-dashboard">
+        <div class="color">
+            <!-- Top half of the page -->
+            <div class="container " id="top">
+                <div class="row container col-12">
+                    <div id="card1" class="card col-sm-12 col-md-12 col-lg-12 col-xl-3 grid border-0 bg-dark"></div>
+                    <div id="card2" class="container col-lg-12 col-xl-8 grid border-0 bg-dark"></div>
+                </div>
+            </div>
+            <!-- hourly forecast -->
+            <div class="container" id="middle">
+                <h3 class="card-headers">Hourly Forecast</h3>
+                <div class="row container col-12 d-flex justify-content-between" id="hourlyForecast">
+                </div>
+            </div>
+            <!-- next 5 day weather -->
+            <div class="container" id="bottom"> 
+                <h3 class="card-headers">Daily Forecast</h3>
+                <div class="row container col-12 d-flex justify-content-between" id="weeklyForecast">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jquery link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- moment.js link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- js link -->
+    <script src="assets/js/search.js"></script>
+</body>
+
+</html>

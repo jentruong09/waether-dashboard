@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* page styling */
+:root {
+    --bg-color: #1b1b1b;
+    --second-bg-color: #262626;
+    --text-color: #fff;
+    --main-color: #ec6e4c;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+i {
+    color: var(--main-color);
+}
+
+
+/* header area */
+.logo {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: var(--text-color);
+}
+
+.header h3 {
+    font-size: 2rem;
+}
+
+.header p {
+    color: var(--main-color);
+}
+
+button i {
+    color: var(--main-color);
+}
+
+header h3 a {
+    color: var(--text-color);
+}
+
+header h3 a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+header h3 a:visited {
+    color: var(--text-color);
+}
+
+
+/* cards */
+#top {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+#bottom {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* for each containter/card */
+.card {
+    border-radius: 1.5rem;
+}
+
+.card-headers {
+    padding-top: 1rem;
+}
+
+.card-body p {
+    font-size: .75rem;
+}
+
+#card2 {
+    border-radius: 1.5rem;
+    display: none;
+}
+
+.today {
+    margin-top: .75rem;
+    margin-left: 1.25rem;
+    color: var(--main-color);
+}
+
+.highlight {
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+/* hourly css */
+.hourlyImage {
+    width: 2rem;
+    height: 2rem;
+}
+
+#hourlycard {
+    margin: .25rem;
+}
+
+/* headers for hourly and daily */
+.card-headers {
+    display: none;
+    color: var(--main-color);
+}
+
+.highlight {
+    background-color: var(--second-bg-color);
+    width: 9rem;
+    height: 7rem;
+    margin: .5rem;
+}
+
+/* To change the color of the UV */
+.favorable {
+    color: darkgreen
+}
+
+.moderate {
+    color: goldenrod
+}
+
+.severe {
+    color: rgba(255, 0, 0, 0.733)
+}
+
+
+@media (max-width: 1199px) {
+    #card1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #card2 {
+        margin-top: 2rem;
+
+    }
+
+    #top {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #card2 {
+        display: none !important;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dailyWeather {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #place{
+        margin: 0;
+        width: 70%;
+    }
+}
