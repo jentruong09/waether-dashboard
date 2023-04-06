@@ -1,12 +1,9 @@
 var API_KEY = "ed5364c18831aa760172c5c93330a21e";
 
 var searchCity=JSON.parse(localStorage.getItem("searchCity"))
-console.log(searchCity)
 getWeather(searchCity)
 //searchCity = $("#place").val();
 var data;
-
-
 
 // Using one api to search via city to get lat and lon for second api that requires lat and lon for 7 day weather with uv
 function getWeather(searchCity) {
@@ -15,7 +12,12 @@ function getWeather(searchCity) {
     fetch(apiURL)
         .then(function(response){
             console.log(response);
-            return response.json();
+            if (response.status === 404) {
+                console.log("error")
+                window.location.assign(href="searchError.html")
+            } else {
+                return response.json();
+            }
         })
         .then(function(data){
             
@@ -34,7 +36,6 @@ function getWeather(searchCity) {
                 .then(function(uvData){
                     console.log(uvData)
 
-               
 
                     var image = uvData.daily[0].weather[0].icon
                     var city = data.name
@@ -196,10 +197,13 @@ function getWeather(searchCity) {
                 }
 
 
-                })
-       }); 
+                } 
+                
+            )
+       } 
+       ); 
        
-}; console.log(getWeather)
+} 
 
 
 
@@ -208,21 +212,24 @@ var storeArray = [];
 // clicking the search button will store info and get weather 
 $('.search').on("click", function(event){
     event.preventDefault();
+    
     $("#card1").empty()
     $("#card2").empty()
     $("#hourlyForecast").empty()
     $("#weeklyForecast").empty()
-    searchCity = $("#place").val();
+    //searchCity = $("#place").val();
     localStorage.setItem("searchCity",JSON.stringify(searchCity))
     // creates a the location for the api to know which city the user wants
     searchCity = $(".form-control").val().trim();
+    // empty search bar
+    $("#place").val('')
     getWeather(searchCity);
 
     
-    var searchContent = $(this).siblings("input").val();
-    storeArray.push(searchCity),
-    localStorage.setItem("storedCityName", JSON.stringify(storeArray));
-    console.log(storeArray)
+    // var searchContent = $(this).siblings("input").val();
+    // storeArray.push(searchCity),
+    // localStorage.setItem("storedCityName", JSON.stringify(storeArray));
+    // console.log(storeArray)
 
     // to create new button after click
     // var newButton = $("<button>")

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* page styling */
+:root {
+    --bg-color: #1b1b1b;
+    --second-bg-color: #262626;
+    --text-color: #fff;
+    --main-color: #ec6e4c;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+i {
+    color: var(--main-color);
+}
+
+
+/* header area */
+.logo {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: var(--text-color);
+}
+
+.header h3 {
+    font-size: 2rem;
+}
+
+.header p {
+    color: var(--main-color);
+}
+
+button i {
+    color: var(--main-color);
+}
+
+header h3 a {
+    color: var(--text-color);
+}
+
+header h3 a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+/* search bar */
+#searchContainer {
+    padding-top: 12%;
+    text-align: center;
+}
+
+.errorMessage {
+    padding-bottom: 1%;
+}
