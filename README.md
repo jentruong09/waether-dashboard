@@ -1,7 +1,7 @@
 # Weather-or-Not
 
 ## Project Description
-With this weather application, you can find the weather of over 200,000 cities! Simply search up any city and find the weather forecast of up to 5 days. 
+With this weather application, you can find the weather of over 200,000 cities! Simply search up any city and find the weather forecast of up to 7 days as well as the next 12 hours. 
 
 <br/>
 
@@ -29,7 +29,7 @@ With this weather application, you can find the weather of over 200,000 cities! 
 
 ## Usage
 
-![dashboard](/assets/images/weather-dashboard.jpg)
+![dashboard](/assets/images/dashboard.png)
 
 <br/>
 
@@ -54,6 +54,8 @@ Technologies Used in this project:
 [Moment.js](https://momentjs.com/)
 
 [Google Fonts](https://fonts.google.com/)
+
+[Boxicons](https://boxicons.com)
 
 
 <br/>
