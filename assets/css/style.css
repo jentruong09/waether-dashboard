@@ -27,12 +27,8 @@ i {
     color: var(--text-color);
 }
 
-.header h3 {
+.header i {
     font-size: 2rem;
-}
-
-.header p {
-    color: var(--main-color);
 }
 
 button i {
@@ -51,4 +47,9 @@ header h3 a:hover {
 /* search bar */
 #searchContainer {
     padding-top: 15%;
+    text-align: center;
+}
+
+#searchContainer p {
+    color: var(--main-color);
 }
